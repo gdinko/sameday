@@ -1,0 +1,43 @@
+{
+    "name": "mchervenkov/sameday",
+    "description": "Laravel Sameday API Wrapper",
+    "keywords": [
+        "mchervenkov",
+        "sameday",
+        "sameday laravel",
+        "laravel"
+    ],
+    "homepage": "https://github.com/gdinko/sameday",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mario Chervenkov",
+            "email": "mario.chervenkov@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mchervenkov\\Sameday\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mchervenkov\\Sameday\\SamedayServiceProvider"
+            ],
+            "aliases": {
+                "Sameday": "Mchervenkov\\Sameday\\Facades\\Sameday"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "version": "1.0.0"
+}
