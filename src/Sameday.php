@@ -7,6 +7,7 @@ class Sameday
     use MakesHttpRequests;
     use Actions\ManageClient;
     use Actions\ManageGeolocation;
+    use Actions\ManageLockers;
 
     /**
      * Sameday Authentication Username

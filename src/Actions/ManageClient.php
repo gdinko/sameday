@@ -2,7 +2,10 @@
 
 namespace Mchervenkov\Sameday\Actions;
 
+use Illuminate\Validation\ValidationException;
 use Mchervenkov\Sameday\Exceptions\SamedayException;
+use Mchervenkov\Sameday\Exceptions\SamedayValidationException;
+use Mchervenkov\Sameday\Hydrators\Awb;
 use Mchervenkov\Sameday\Hydrators\Paginator;
 
 trait ManageClient
@@ -41,6 +44,44 @@ trait ManageClient
         return $this->get(
             'api/client/pickup-points',
             $this->getPaginationData($paginator)
+        );
+    }
+
+    /**
+     * Obtaining the status by calling the endpoint GET/api/client/awb/{awbNumber}/status:
+     *
+     * @param Awb $awb
+     * @return mixed
+     * @throws SamedayException
+     * @throws ValidationException
+     * @throws SamedayValidationException
+     */
+    public function getAwbStatus(Awb $awb): mixed
+    {
+        $awbNumber = data_get($awb->validated(), 'number');
+
+        return $this->get(
+            "api/client/awb/$awbNumber/status"
+        );
+    }
+
+    /**
+     * Sync the status by calling the endpoint GET/api/client/status-sync
+     *
+     * @param Awb|null $awb
+     * @param Paginator|null $paginator
+     * @return mixed
+     * @throws SamedayException
+     * @throws SamedayValidationException
+     * @throws ValidationException
+     */
+    public function syncStatus(Awb $awb = null, Paginator $paginator = null): mixed
+    {
+        $awbData = $awb ? $awb->validated() : [];
+
+        return $this->get(
+            "api/client/awb/status-sync",
+            array_merge($awbData, $this->getPaginationData($paginator))
         );
     }
 }

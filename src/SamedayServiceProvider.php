@@ -3,7 +3,9 @@
 namespace Mchervenkov\Sameday;
 
 use Illuminate\Support\ServiceProvider;
+use Mchervenkov\Sameday\Commands\GetSamedayCities;
 use Mchervenkov\Sameday\Commands\GetSamedayCounties;
+use Mchervenkov\Sameday\Commands\GetSamedayLockers;
 
 class SamedayServiceProvider extends ServiceProvider
 {
@@ -33,6 +35,8 @@ class SamedayServiceProvider extends ServiceProvider
             // Registering package commands.
             $this->commands([
                 GetSamedayCounties::class,
+                GetSamedayCities::class,
+                GetSamedayLockers::class,
             ]);
         }
     }
