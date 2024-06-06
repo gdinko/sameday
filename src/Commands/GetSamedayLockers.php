@@ -2,16 +2,13 @@
 
 namespace Mchervenkov\Sameday\Commands;
 
-use App\Models\SamedayLocker;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Validation\ValidationException;
 use Mchervenkov\Sameday\Exceptions\SamedayException;
 use Mchervenkov\Sameday\Exceptions\SamedayValidationException;
-use Mchervenkov\Sameday\Hydrators\City;
 use Mchervenkov\Sameday\Hydrators\Locker;
-use Mchervenkov\Sameday\Hydrators\Paginator;
-use Mchervenkov\Sameday\Models\SamedayCity;
+use Mchervenkov\Sameday\Models\SamedayLocker;
 use Mchervenkov\Sameday\Sameday;
 
 class GetSamedayLockers extends Command
@@ -79,10 +76,10 @@ class GetSamedayLockers extends Command
 
         $response = $sameday->getLockers($this->initLockerHydrator());
 
-        if (! empty($response['data'])) {
-            foreach ($response['data'] as $city) {
+        if (! empty($response)) {
+            foreach ($response as $locker) {
 
-                SamedayLocker::create($this->getLockerData($city));
+                SamedayLocker::create($this->getLockerData($locker));
             }
         }
 
