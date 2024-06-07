@@ -22,7 +22,7 @@ class GetSamedayLockers extends Command
      * @var string
      */
     protected $signature = 'sameday:get-lockers
-                            {--countryCode= : Filter lockers by country ISO code with 2 digits }
+                            {--country_code= : Filter lockers by country ISO code with 2 digits }
                             {--clear= : Clear Database table from records older than X days}
                             {--timeout=5 : Sameday API Call timeout}';
 
@@ -123,7 +123,7 @@ class GetSamedayLockers extends Command
     private function initLockerHydrator(): Locker
     {
         return new Locker([
-            'countryCode' => $this->option('countryCode') ?? null
+            'countryCode' => $this->option('country_code') ?? null
         ]);
     }
 

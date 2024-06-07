@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *  Mchervenkov\Sameday\Models\SamedayLocker
  *
  * @property int $id
+ * @property int $city_uuid
  * @property int $locker_id
  * @property int $county_id
  * @property int $country_id
@@ -28,6 +29,7 @@ class SamedayLocker extends Model
     protected $table = 'sameday_lockers';
 
     protected $fillable = [
+        'city_uuid',
         'locker_id',
         'county_id',
         'country_id',

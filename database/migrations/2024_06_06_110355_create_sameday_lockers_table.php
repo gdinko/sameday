@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('sameday_lockers', function (Blueprint $table) {
             $table->id();
+            $table->char('city_uuid', 36)->nullable()->index();
             $table->unsignedBigInteger('locker_id');
             $table->unsignedBigInteger('county_id');
             $table->unsignedBigInteger('country_id');

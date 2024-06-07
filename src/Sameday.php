@@ -9,6 +9,8 @@ class Sameday
     use Actions\ManageGeolocation;
     use Actions\ManageLockers;
 
+    public const SIGNATURE = 'CARRIER_SAMEDAY';
+
     /**
      * Sameday Authentication Username
      */
@@ -139,5 +141,15 @@ class Sameday
     public function getTimeout(): int
     {
         return $this->timeout;
+    }
+
+    /**
+     * getSignature
+     *
+     * @return string
+     */
+    public function getSignature(): string
+    {
+        return self::SIGNATURE;
     }
 }

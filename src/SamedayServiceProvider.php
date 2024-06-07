@@ -3,9 +3,11 @@
 namespace Mchervenkov\Sameday;
 
 use Illuminate\Support\ServiceProvider;
+use Mchervenkov\Sameday\Commands\GetSamedayApiStatus;
 use Mchervenkov\Sameday\Commands\GetSamedayCities;
 use Mchervenkov\Sameday\Commands\GetSamedayCounties;
 use Mchervenkov\Sameday\Commands\GetSamedayLockers;
+use Mchervenkov\Sameday\Commands\MapSamedayCities;
 
 class SamedayServiceProvider extends ServiceProvider
 {
@@ -37,6 +39,8 @@ class SamedayServiceProvider extends ServiceProvider
                 GetSamedayCounties::class,
                 GetSamedayCities::class,
                 GetSamedayLockers::class,
+                GetSamedayApiStatus::class,
+                MapSamedayCities::class,
             ]);
         }
     }
