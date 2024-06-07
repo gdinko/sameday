@@ -14,12 +14,12 @@ return [
     /**
      * Set Sameday API username
      */
-    'x_auth_username' => env('SAMEDAY_AUTH_USERNAME'),
+    'x_auth_username' => env('SAMEDAY_AUTH_USERNAME', 'test-sameday-username'),
 
     /**
      * Set Sameday API password
      */
-    'x_auth_password' => env('SAMEDAY_AUTH_PASSWORD'),
+    'x_auth_password' => env('SAMEDAY_AUTH_PASSWORD', 'test-sameday-password'),
 
     /**
      * Default Sameday test base url

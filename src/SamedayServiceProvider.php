@@ -50,6 +50,9 @@ class SamedayServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Automatically apply the package configuration
+        $this->mergeConfigFrom(__DIR__ . '/../config/sameday.php', 'sameday');
+
         // Register the main class to use with the facade
         $this->app->singleton('sameday', function () {
             return new Sameday();
