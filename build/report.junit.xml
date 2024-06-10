@@ -1,30 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="13" assertions="21" errors="3" warnings="0" failures="5" skipped="0" time="9.545309">
-    <testsuite name="P\Tests\CommandsTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="4" assertions="3" errors="1" warnings="0" failures="0" skipped="0" time="5.066500">
-      <testcase name="it Can Get Lockers" assertions="1" time="1.215235"/>
-      <testcase name="it Can Get Counties" assertions="1" time="0.923880"/>
-      <testcase name="it Can Check API Status" assertions="0" time="1.853697">
-        <error type="Illuminate\Database\QueryException">C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php::it Can Check API Status
-Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: sameday_api_statuses (SQL: insert into "sameday_api_statuses" ("code", "updated_at", "created_at") values (404, 2024-06-07 13:28:04, 2024-06-07 13:28:04))
+  <testsuite name="" tests="12" assertions="16" errors="8" warnings="0" failures="0" skipped="0" time="13.877617">
+    <testsuite name="P\Tests\ManageClientTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="10.007422">
+      <testcase name="it Can Get Services" assertions="0" time="10.007422">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageClientTest.php::it Can Get Services
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
 
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Connection.php:672
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Connection.php:490
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Connection.php:454
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php:32
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:3028
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:1657
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:1188
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:1153
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:994
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:896
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Support\helpers.php:263
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:895
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:23
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:2132
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:2144
-C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayApiStatus.php:65
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageClient.php:25
+C:\laragon\www\laravel-packages\packages\sameday\tests\ManageClientTest.php:7
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="P\Tests\CommandsTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="4" assertions="0" errors="4" warnings="0" failures="0" skipped="0" time="2.285276">
+      <testcase name="it Can Get Counties" assertions="0" time="0.618885">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php::it Can Get Counties
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
+
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageGeolocation.php:26
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayCounties.php:86
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayCounties.php:61
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Util.php:40
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Container.php:653
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Command.php:136
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Command\Command.php:298
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Command.php:120
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:1040
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:171
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Application.php:94
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Application.php:185
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:263
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Testing\PendingCommand.php:260
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Testing\PendingCommand.php:413
+C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php:8
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
+      </testcase>
+      <testcase name="it Can Get Lockers" assertions="0" time="0.721346">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php::it Can Get Lockers
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
+
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageLockers.php:25
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayLockers.php:77
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayLockers.php:51
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Util.php:40
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Container.php:653
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Command.php:136
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Command\Command.php:298
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Command.php:120
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:1040
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:171
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Application.php:94
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Application.php:185
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:263
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Testing\PendingCommand.php:260
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Testing\PendingCommand.php:413
+C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php:12
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
+      </testcase>
+      <testcase name="it Can Check API Status" assertions="0" time="0.422881">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php::it Can Check API Status
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
+
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageLockers.php:25
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayApiStatus.php:55
 C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
 C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Util.php:40
 C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
@@ -51,39 +129,33 @@ C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
       </testcase>
-      <testcase name="it Can Get Cities" assertions="1" time="1.073688"/>
-    </testsuite>
-    <testsuite name="P\Tests\ManageClientTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="2" assertions="2" errors="1" warnings="0" failures="1" skipped="0" time="1.610096">
-      <testcase name="it Can Get Services" assertions="2" time="0.795458">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageClientTest.php::it Can Get Services
-Failed asserting that an array has the key 'data.id'
+      <testcase name="it Can Get Cities" assertions="0" time="0.522165">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php::it Can Get Cities
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
 
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:728
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:746
-C:\laragon\www\laravel-packages\packages\sameday\tests\ManageClientTest.php:11
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</failure>
-      </testcase>
-      <testcase name="it Can Get Pickup Points" assertions="0" time="0.814637">
-        <error type="Mchervenkov\Sameday\Exceptions\SamedayException">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageClientTest.php::it Can Get Pickup Points
-Mchervenkov\Sameday\Exceptions\SamedayException: HTTP request returned status code 500:
-{"error":{"code":500,"message":"An internal error occurred."}}
-
-
-C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:80
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Http\Client\Response.php:307
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Support\helpers.php:263
-C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Http\Client\Response.php:305
-C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:79
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
 C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
-C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageClient.php:44
-C:\laragon\www\laravel-packages\packages\sameday\tests\ManageClientTest.php:22
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageGeolocation.php:48
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayCities.php:86
+C:\laragon\www\laravel-packages\packages\sameday\src\Commands\GetSamedayCities.php:61
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Util.php:40
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Container\Container.php:653
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Command.php:136
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Command\Command.php:298
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Command.php:120
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:1040
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\symfony\console\Application.php:171
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Application.php:94
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Console\Application.php:185
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:263
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Testing\PendingCommand.php:260
+C:\laragon\www\laravel-packages\packages\sameday\vendor\laravel\framework\src\Illuminate\Testing\PendingCommand.php:413
+C:\laragon\www\laravel-packages\packages\sameday\tests\CommandsTest.php:4
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
@@ -94,66 +166,22 @@ C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
       </testcase>
     </testsuite>
-    <testsuite name="P\Tests\ManageLockersTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="1" assertions="2" errors="0" warnings="0" failures="1" skipped="0" time="0.936512">
-      <testcase name="it Can Get Lockers" assertions="2" time="0.936512">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageLockersTest.php::it Can Get Lockers
-Failed asserting that an array has the key 'lockerId'
-
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:728
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:746
-C:\laragon\www\laravel-packages\packages\sameday\tests\ManageLockersTest.php:11
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</failure>
-      </testcase>
+    <testsuite name="P\Tests\SetupTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="4" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.114487">
+      <testcase name="set props of sameday object" assertions="7" time="0.021276"/>
+      <testcase name="set test endpoint of sameday object" assertions="1" time="0.018763"/>
+      <testcase name="set production endpoint of sameday object" assertions="1" time="0.053461"/>
+      <testcase name="setup default sameday object" assertions="7" time="0.020986"/>
     </testsuite>
-    <testsuite name="P\Tests\ManageGeolocationTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="2" assertions="4" errors="0" warnings="0" failures="2" skipped="0" time="1.873419">
-      <testcase name="it Can Get Cities" assertions="2" time="1.094783">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php::it Can Get Cities
-Failed asserting that an array has the key 'data.id'
+    <testsuite name="P\Tests\ManageLockersTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="0.527214">
+      <testcase name="it Can Get Lockers" assertions="0" time="0.527214">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageLockersTest.php::it Can Get Lockers
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
 
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:728
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:746
-C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php:26
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</failure>
-      </testcase>
-      <testcase name="it Can Get Counties" assertions="2" time="0.778636">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php::it Can Get Counties
-Failed asserting that an array has the key 'data.id'
-
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:728
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:746
-C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php:11
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</failure>
-      </testcase>
-    </testsuite>
-    <testsuite name="P\Tests\SetupTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="4" assertions="10" errors="1" warnings="0" failures="1" skipped="0" time="0.058782">
-      <testcase name="set production endpoint of sameday object" assertions="0" time="0.013289">
-        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\SetupTest.php::set production endpoint of sameday object
-TypeError: Cannot assign null to property Mchervenkov\Sameday\Sameday::$baseUrl of type string
-
-C:\laragon\www\laravel-packages\packages\sameday\src\Sameday.php:52
-C:\laragon\www\laravel-packages\packages\sameday\src\Sameday.php:41
-C:\laragon\www\laravel-packages\packages\sameday\tests\SetupTest.php:60
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageLockers.php:25
+C:\laragon\www\laravel-packages\packages\sameday\tests\ManageLockersTest.php:7
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
@@ -163,13 +191,17 @@ C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
       </testcase>
-      <testcase name="setup default sameday object" assertions="7" time="0.014090"/>
-      <testcase name="set props of sameday object" assertions="2" time="0.015518">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">C:\laragon\www\laravel-packages\packages\sameday\tests\SetupTest.php::set props of sameday object
-Failed asserting that an array has the key 'user'.
+    </testsuite>
+    <testsuite name="P\Tests\ManageGeolocationTest" file="C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php(223) : eval()'d code" tests="2" assertions="0" errors="2" warnings="0" failures="0" skipped="0" time="0.943219">
+      <testcase name="it Can Get Cities" assertions="0" time="0.410739">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php::it Can Get Cities
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
 
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Expectation.php:826
-C:\laragon\www\laravel-packages\packages\sameday\tests\SetupTest.php:35
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageGeolocation.php:48
+C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php:24
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
@@ -177,9 +209,26 @@ C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concern
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
 C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
-C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</failure>
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
       </testcase>
-      <testcase name="set test endpoint of sameday object" assertions="1" time="0.015886"/>
+      <testcase name="it Can Get Counties" assertions="0" time="0.532480">
+        <error type="TypeError">C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php::it Can Get Counties
+TypeError: Mchervenkov\Sameday\Sameday::getToken(): Return value must be of type string, null returned
+
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:106
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:64
+C:\laragon\www\laravel-packages\packages\sameday\src\MakesHttpRequests.php:24
+C:\laragon\www\laravel-packages\packages\sameday\src\Actions\ManageGeolocation.php:26
+C:\laragon\www\laravel-packages\packages\sameday\tests\ManageGeolocationTest.php:7
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Factories\TestCaseFactory.php:151
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:301
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Support\ExceptionTrace.php:29
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:300
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Concerns\Testable.php:278
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\src\Console\Command.php:119
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:62
+C:\laragon\www\laravel-packages\packages\sameday\vendor\pestphp\pest\bin\pest:63</error>
+      </testcase>
     </testsuite>
   </testsuite>
 </testsuites>

@@ -56,7 +56,7 @@ class Awb
      *
      * @return array
      */
-    private function validationRules(): array
+    protected function validationRules(): array
     {
         return [
             'number' => 'nullable|string',

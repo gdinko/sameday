@@ -56,7 +56,7 @@ class Locker
      *
      * @return array
      */
-    private function validationRules(): array
+    protected function validationRules(): array
     {
         return [
             'lockerList' => 'nullable|string',

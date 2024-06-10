@@ -29,7 +29,7 @@ return [
     /**
      * Default Sameday production base url
      */
-    'production_base_api_url' => rtrim(env('SAMEDAY_API_PRODUCTION_BASE_URI', 'https://sameday-api.demo.zitec.com/'), '/'),
+    'production_base_url' => rtrim(env('SAMEDAY_API_PRODUCTION_BASE_URI', 'https://sameday-api.demo.zitec.com'), '/'),
 
     /**
      * Set Request timeout

@@ -56,7 +56,7 @@ class City
      *
      * @return array
      */
-    private function validationRules(): array
+    protected function validationRules(): array
     {
         return [
             'name' => 'nullable|string',

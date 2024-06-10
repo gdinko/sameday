@@ -4,28 +4,32 @@ it('Can Get Counties', function () {
 
     $sameday = new Mchervenkov\Sameday\Sameday();
 
-    $repoonse = $sameday->getCounties();
+    $response = $sameday->getCounties();
 
-    expect($repoonse)
-        ->toBeArray()
-        ->toHaveKeys([
-            'data.id',
-        ]);
+    expect($response['data'])
+        ->toBeArray();
 
-    $this->assertIsNumeric($repoonse['data']['id']);
+    foreach ($response['data'] as $county) {
+        expect($county)
+            ->toHaveKeys([
+                'id',
+            ]);
+    }
 });
 
 it('Can Get Cities', function () {
 
     $sameday = new Mchervenkov\Sameday\Sameday();
 
-    $repoonse = $sameday->getCities();
+    $response = $sameday->getCities();
 
-    expect($repoonse)
-        ->toBeArray()
-        ->toHaveKeys([
-            'data.id',
-        ]);
+    expect($response['data'])
+        ->toBeArray();
 
-    $this->assertIsNumeric($repoonse['data']['id']);
+    foreach ($response['data'] as $city) {
+        expect($city)
+            ->toHaveKeys([
+                'id',
+            ]);
+    }
 });

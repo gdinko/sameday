@@ -4,13 +4,15 @@ it('Can Get Lockers', function () {
 
     $sameday = new Mchervenkov\Sameday\Sameday();
 
-    $repoonse = $sameday->getLockers();
+    $response = $sameday->getLockers();
 
-    expect($repoonse)
-        ->toBeArray()
+    expect($response)
+        ->toBeArray();
+
+    foreach ($response as $locker) {
+        expect($locker)
         ->toHaveKeys([
             'lockerId',
         ]);
-
-    $this->assertIsNumeric($repoonse['lockerId']);
+    }
 });

@@ -33,8 +33,8 @@ test('set props of sameday object', function () {
     $sameday->setAccount('user', 'pass');
 
     expect($sameday->getAccount())->toMatchArray([
-        'user' => 'user',
-        'pass' => 'pass',
+        'x_auth_username' => 'user',
+        'x_auth_password' => 'pass',
     ]);
 
     $sameday->setBaseUrl('endpoint');
@@ -59,5 +59,5 @@ test('set production endpoint of sameday object', function () {
 
     $sameday = new Sameday();
 
-    expect($sameday->getBaseUrl())->toEqual(config('econt.production_base_api_url'));
+    expect($sameday->getBaseUrl())->toEqual(config('sameday.production_base_url'));
 });
