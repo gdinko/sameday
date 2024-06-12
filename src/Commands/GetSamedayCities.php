@@ -85,19 +85,25 @@ class GetSamedayCities extends Command
      */
     protected function insertCities(Sameday $sameday, City $cityHydrator, Paginator $paginator) : void
     {
-        $response = $sameday->getCities($cityHydrator, $paginator);
+        $hasMorePages = true;
 
-        if (! empty($response['data'])) {
-            foreach ($response['data'] as $city) {
+        while ($hasMorePages) {
 
-                SamedayCity::create($this->getCityData($city));
-            }
+            $response = $sameday->getCities($cityHydrator, $paginator);
 
-            $pages = data_get($response, 'pages');
+            if (! empty($response['data'])) {
+                foreach ($response['data'] as $city) {
 
-            if($pages > 1 && $pages > $paginator->page) {
-                $paginator->setPage($paginator->page + 1);
-                $this->insertCities($sameday, $cityHydrator, $paginator);
+                    SamedayCity::create($this->getCityData($city));
+                }
+
+                $pages = data_get($response, 'pages');
+
+                if($pages > 1 && $pages > $paginator->page) {
+                    $paginator->setPage($paginator->page + 1);
+                } else {
+                    $hasMorePages = false;
+                }
             }
         }
 
