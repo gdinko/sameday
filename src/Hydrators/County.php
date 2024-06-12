@@ -13,7 +13,7 @@ class County
      *
      * @var string|null
      */
-    private string|null $name;
+    public string|null $name;
 
     /**
      * Set Name and Paginator params

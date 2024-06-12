@@ -61,6 +61,8 @@ class MapSamedayCities extends Command
             $this->error(
                 $e->getMessage()
             );
+
+            return 1;
         }
 
         return 0;

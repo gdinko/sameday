@@ -1,4 +1,4 @@
-# Laravel Smaeday API Wrapper
+# Laravel Sameday API Wrapper
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mchervenkov/sameday.svg?style=flat-square)](https://packagist.org/packages/mchervenkov/sameday)
 [![Total Downloads](https://img.shields.io/packagist/dt/mchervenkov/sameday.svg?style=flat-square)](https://packagist.org/packages/mchervenkov/sameday)
@@ -10,7 +10,7 @@
 You can install the package via composer:
 
 ```bash
-composer require mchervenkov/econt
+composer require mchervenkov/sameday
 ```
 
 If you plan to use database for storing nomenclatures:
@@ -59,20 +59,20 @@ SAMEDAY_API_TIMEOUT= #default=5
 Methods
 ```php
 
-//Nomenclatures
+// Init Sameday Client
 $sameday = new Sameday();
 
-// Client
+// Client endpoints
 $sameday->getServices();
 $sameday->getPickupPoints();
 $sameday->getAwbStatus();
 $sameday->syncStatus();
 
-// Geolocation
+// Geolocation endpoints
 $sameday->getCounties();
 $sameday->getCities();
 
-// Lockers
+// Lockers endpoints
 $sameday->getLockers();
 ```
 

@@ -69,6 +69,8 @@ class GetSamedayCounties extends Command
             $this->error(
                 $e->getMessage()
             );
+
+            return 1;
         }
 
         return 0;
@@ -76,7 +78,7 @@ class GetSamedayCounties extends Command
 
     /**
      * @param Sameday $sameday
-     * @param County $county
+     * @param County $countyHydrator
      * @param Paginator $paginator
      * @return void
      * @throws SamedayException

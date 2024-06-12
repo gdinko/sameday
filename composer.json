@@ -34,7 +34,8 @@
     },
     "require-dev": {
         "orchestra/testbench": "^8.18",
-        "pestphp/pest": "^2.34"
+        "pestphp/pest": "^2.34",
+        "larastan/larastan": "^2.9"
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",

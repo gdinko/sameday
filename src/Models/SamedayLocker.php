@@ -2,6 +2,7 @@
 
 namespace Mchervenkov\Sameday\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $postal_code
  * @property string $lat
  * @property string $lng
+ * @method static Builder|CarrierCityMap create(array $attributes)
  */
 class SamedayLocker extends Model
 {

@@ -2,6 +2,7 @@
 
 namespace Mchervenkov\Sameday\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $county_latin_name
  * @property string $country_name
  * @property string $country_code
+ * @method static Builder|CarrierCityMap create(array $attributes)
  */
 class SamedayCity extends Model
 {

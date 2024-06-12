@@ -2,6 +2,7 @@
 
 namespace Mchervenkov\Sameday\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -9,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property int $code
+ * @method static Builder|CarrierCityMap create(array $attributes)
+ * @method static Builder|CarrierCityMap where($column, $operator = null, $value = null, $boolean = 'and')
  */
 class SamedayApiStatus extends Model
 {
