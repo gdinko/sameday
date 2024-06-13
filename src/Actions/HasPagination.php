@@ -19,7 +19,7 @@ trait HasPagination
         if($paginator) {
             $paginationData = [
                 'page' => $paginator->page,
-                'countPerPage' => $paginator->countPerPage
+                'countPerPage' => $paginator->countPerPage,
             ];
         }
 

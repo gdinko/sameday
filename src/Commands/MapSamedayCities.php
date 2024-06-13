@@ -3,12 +3,12 @@
 namespace Mchervenkov\Sameday\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 use Mchervenkov\Sameday\Exceptions\SamedayImportValidationException;
 use Mchervenkov\Sameday\Models\CarrierCityMap;
 use Mchervenkov\Sameday\Models\SamedayCity;
 use Mchervenkov\Sameday\Models\SamedayLocker;
 use Mchervenkov\Sameday\Sameday;
-use Illuminate\Support\Str;
 use Ramsey\Uuid\Uuid;
 
 class MapSamedayCities extends Command
@@ -86,7 +86,7 @@ class MapSamedayCities extends Command
 
         $cities = SamedayCity::all();
 
-        if (!SamedayLocker::query()->where('country_id', $city->country_id)->count()) {
+        if (! SamedayLocker::query()->where('country_id', $city->country_id)->count()) {
             $this->newLine();
             $this->warn('[WARN] Import Sameday Lockers first to map locker city ...');
             $this->newLine();

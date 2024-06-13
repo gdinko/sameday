@@ -83,7 +83,7 @@ class GetSamedayCounties extends Command
      * @return void
      * @throws SamedayException
      */
-    protected function insertCounties(Sameday $sameday, County $countyHydrator, Paginator $paginator) : void
+    protected function insertCounties(Sameday $sameday, County $countyHydrator, Paginator $paginator): void
     {
         $response = $sameday->getCounties($countyHydrator, $paginator);
 

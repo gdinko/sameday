@@ -2,9 +2,9 @@
 
 namespace Mchervenkov\Sameday\Hydrators;
 
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 use Mchervenkov\Sameday\Exceptions\SamedayValidationException;
-use Illuminate\Support\Facades\Validator;
 
 class City
 {

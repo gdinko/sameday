@@ -83,7 +83,7 @@ class GetSamedayCities extends Command
      * @return void
      * @throws SamedayException
      */
-    protected function insertCities(Sameday $sameday, City $cityHydrator, Paginator $paginator) : void
+    protected function insertCities(Sameday $sameday, City $cityHydrator, Paginator $paginator): void
     {
         $hasMorePages = true;
 

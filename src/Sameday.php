@@ -31,7 +31,6 @@ class Sameday
      */
     private int $timeout;
 
-
     public function __construct()
     {
         $this->xAuthUsername = config('sameday.x_auth_username');

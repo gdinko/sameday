@@ -2,11 +2,11 @@
 
 namespace Mchervenkov\Sameday;
 
+use Exception;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
-use Exception;
 use Mchervenkov\Sameday\Exceptions\SamedayException;
 
 trait MakesHttpRequests
@@ -66,7 +66,7 @@ trait MakesHttpRequests
         $response = Http::withHeaders(['X-AUTH-TOKEN' => $token])
             ->timeout($this->timeout)
             ->retry(2, 0, function (Exception $exception, PendingRequest $request) {
-                if (!$exception instanceof RequestException || $exception->response->status() !== 401) {
+                if (! $exception instanceof RequestException || $exception->response->status() !== 401) {
                     return false;
                 }
 
@@ -91,7 +91,7 @@ trait MakesHttpRequests
      *
      * @return string
      */
-    public function getToken() : string
+    public function getToken(): string
     {
         $response = Http::withHeaders([
             'X-AUTH-USERNAME' => $this->xAuthUsername,

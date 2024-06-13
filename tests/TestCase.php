@@ -2,10 +2,10 @@
 
 namespace Mchervenkov\Sameday\Tests;
 
-use Mchervenkov\Sameday\SamedayServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mchervenkov\Sameday\SamedayServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -37,7 +37,7 @@ class TestCase extends Orchestra
         ]);
 
         config()->set('app.key', 'base64:' . base64_encode(
-                Encrypter::generateKey(config()['app.cipher'])
-            ));
+            Encrypter::generateKey(config()['app.cipher'])
+        ));
     }
 }

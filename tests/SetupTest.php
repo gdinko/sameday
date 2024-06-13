@@ -2,7 +2,6 @@
 
 use Mchervenkov\Sameday\Sameday;
 
-
 test('setup default sameday object', function () {
 
     $sameday = new Sameday();

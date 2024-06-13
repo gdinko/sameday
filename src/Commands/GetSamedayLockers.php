@@ -73,7 +73,7 @@ class GetSamedayLockers extends Command
      * @throws ValidationException
      * @throws SamedayValidationException
      */
-    protected function insertLockers(Sameday $sameday) : void
+    protected function insertLockers(Sameday $sameday): void
     {
 
         $response = $sameday->getLockers($this->initLockerHydrator());
@@ -125,7 +125,7 @@ class GetSamedayLockers extends Command
     private function initLockerHydrator(): Locker
     {
         return new Locker([
-            'countryCode' => $this->option('country_code') ?? null
+            'countryCode' => $this->option('country_code') ?? null,
         ]);
     }
 
