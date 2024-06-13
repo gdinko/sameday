@@ -117,7 +117,7 @@ dd($response);
 With Hydrator
 ```php
 $sameday = new Sameday();
-$cityHydrator = new City['countyCode' => 'BG'];
+$cityHydrator = new City(['countyCode' => 'BG']);
 $response = $sameday->getCities($cityHydrator);
 dd($response);
 ```
@@ -125,7 +125,7 @@ dd($response);
 With Hydrator and Paginator
 ```php
 $sameday = new Sameday();
-$cityHydrator = new City['countyCode' => 'BG'];
+$cityHydrator = new City(['countyCode' => 'BG']);
 $paginator = new Paginator(1, 50);
 $response = $sameday->getCities($cityHydrator, $paginator);
 dd($response);
@@ -152,6 +152,7 @@ If you discover any security related issues, please email mario.chervenkov@gmail
 ## Credits
 
 -   [Mario Chervenkov](https://github.com/mariochervenkov)
+-   [silabg.com](https://www.silabg.com/) :heart:
 -   [All Contributors](../../contributors)
 
 ## License
