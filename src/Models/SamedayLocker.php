@@ -5,6 +5,8 @@ namespace Mchervenkov\Sameday\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  *  Mchervenkov\Sameday\Models\SamedayLocker
@@ -44,4 +46,28 @@ class SamedayLocker extends Model
         'lat',
         'lng',
     ];
+
+    /**
+     * @return BelongsTo
+     */
+    public function city(): BelongsTo
+    {
+        return $this->belongsTo(
+            SamedayCity::class,
+            'city_id',
+            'city_id'
+        );
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function cityMap(): HasMany
+    {
+        return $this->hasMany(
+            CarrierCityMap::class,
+            'uuid',
+            'city_uuid'
+        );
+    }
 }
