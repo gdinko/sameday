@@ -27,10 +27,10 @@
             "Mchervenkov\\Sameday\\Tests\\": "tests"
         }
     },
-    "require": {
-        "php": "^8.0|^8.1|^8.2",
+    "require": { 
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3",
         "guzzlehttp/guzzle": "^7.4",
-        "illuminate/support": "^8.0|^9.0|^10.0"
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0"
     },
     "require-dev": {
         "orchestra/testbench": "^8.18",
