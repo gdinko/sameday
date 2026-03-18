@@ -98,7 +98,7 @@ class GetSamedayCounties extends Command
 
             $pages = data_get($response, 'pages');
 
-            if($pages > 1 && $pages > $paginator->page) {
+            if ($pages > 1 && $pages > $paginator->page) {
                 $paginator->setPage($paginator->page + 1);
                 $this->insertCounties($sameday, $countyHydrator, $paginator);
             }
@@ -131,7 +131,7 @@ class GetSamedayCounties extends Command
     {
         $sameday = new Sameday();
 
-        if($timeout = $this->option('timeout')) {
+        if ($timeout = $this->option('timeout')) {
             $sameday->setTimeout((int)$timeout);
         }
 

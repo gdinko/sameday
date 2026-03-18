@@ -228,7 +228,7 @@ class MapSamedayCities extends Command
     {
         $sameday = new Sameday();
 
-        if($timeout = $this->option('timeout')) {
+        if ($timeout = $this->option('timeout')) {
             $sameday->setTimeout((int)$timeout);
         }
 

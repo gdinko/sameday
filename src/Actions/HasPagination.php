@@ -16,7 +16,7 @@ trait HasPagination
     {
         $paginationData = [];
 
-        if($paginator) {
+        if ($paginator) {
             $paginationData = [
                 'page' => $paginator->page,
                 'countPerPage' => $paginator->countPerPage,
