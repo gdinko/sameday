@@ -19,7 +19,7 @@ abstract class TrackCarrierSamedayBase extends Command
      * @var string
      */
     protected $signature = 'sameday:track
-                            {--account= : Set Sameday API Account}
+                            {--account= : Set Sameday API Account ex:user|password}
                             {--clear= : Clear Database table from records older than X days}
                             {--timeout=20 : Sameday API Call timeout}';
 
@@ -29,6 +29,8 @@ abstract class TrackCarrierSamedayBase extends Command
      * @var string
      */
     protected $description = 'Track Sameday parcels';
+
+    protected Sameday $sameday;
 
     /**
      * Create a new command instance.
@@ -42,6 +44,8 @@ abstract class TrackCarrierSamedayBase extends Command
 
     public function handle()
     {
+        $this->sameday = new Sameday();
+
         $this->info('-> Carrier Sameday Parcel Tracking');
 
         try {
@@ -51,7 +55,7 @@ abstract class TrackCarrierSamedayBase extends Command
 
             $this->clear();
 
-            Sameday::setTimeout(
+            $this->sameday->setTimeout(
                 $this->option('timeout')
             );
 
@@ -87,8 +91,10 @@ abstract class TrackCarrierSamedayBase extends Command
     protected function setAccount()
     {
         if ($this->option('account')) {
-            Sameday::setAccountFromStore(
-                $this->option('account')
+            $account = explode('|', $this->option('account'));
+            $this->sameday->setAccount(
+                $account[0],
+                $account[1]
             );
         }
     }
@@ -132,7 +138,7 @@ abstract class TrackCarrierSamedayBase extends Command
         if (! empty($this->parcels)) {
 
             foreach ($this->parcels as $parcel) {
-                $trackingInfo = Sameday::getAwbStatus(
+                $trackingInfo = $this->sameday->getAwbStatus(
                     new Awb(['number' => $parcel])
                 );
 
@@ -160,8 +166,8 @@ abstract class TrackCarrierSamedayBase extends Command
                 'parcel_id' => $trackingInfo['expeditionSummary']['awbNumber'],
             ],
             [
-                'carrier_signature' => Sameday::getSignature(),
-                'carrier_account' => Sameday::getUserName(),
+                'carrier_signature' => $this->sameday->getSignature(),
+                'carrier_account' => $this->sameday->getUserName(),
                 'meta' => $trackingInfo,
             ]
         );
