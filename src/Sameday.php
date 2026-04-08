@@ -25,6 +25,13 @@ class Sameday
     private string $xAuthPassword;
 
     /**
+     * Sameday API Account Store
+     *
+     * @var array
+     */
+    protected $accountStore = [];
+
+    /**
      * Sameday Api Base Url
      */
     private string $baseUrl;
