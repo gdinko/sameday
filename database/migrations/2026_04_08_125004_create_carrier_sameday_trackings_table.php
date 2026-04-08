@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('carrier_signature')->index();
             $table->string('carrier_account')->index();
-            $table->bigInteger('parcel_id')->unique()->index();
+            $table->string('parcel_id')->unique()->index();
             $table->json('meta')->nullable();
 
             $table->timestamps();
