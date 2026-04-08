@@ -70,7 +70,7 @@ trait MakesHttpRequests
                     return false;
                 }
 
-                $request->withHeaders(['X-AUTH-TOKEN' => $this->getToken()]);
+                $request->replaceHeaders(['X-AUTH-TOKEN' => $this->getToken()]);
 
                 return true;
 

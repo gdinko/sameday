@@ -93,6 +93,9 @@ php artisan sameday:get-lockers
 
 #get sameday api status (use -h to view options)
 php artisan sameday:api-status
+
+#track parcel (use -h to view options)
+php artisan sameday:track
 ```
 
 Models

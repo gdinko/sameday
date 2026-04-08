@@ -2,6 +2,9 @@
 
 namespace Mchervenkov\Sameday;
 
+use Illuminate\Support\Str;
+use Mchervenkov\Sameday\Exceptions\SamedayException;
+
 class Sameday
 {
     use MakesHttpRequests;
@@ -150,5 +153,53 @@ class Sameday
     public function getSignature(): string
     {
         return self::SIGNATURE;
+    }
+
+    /**
+     * addAccountToStore
+     *
+     * @param  string $user
+     * @param  string $pass
+     * @return void
+     */
+    public function addAccountToStore(string $user, string $pass)
+    {
+        $this->accountStore[Str::slug($user)] = [
+            'user' => $user,
+            'pass' => $pass,
+        ];
+    }
+
+    /**
+     * getAccountFromStore
+     *
+     * @param  string $user
+     * @return array
+     */
+    public function getAccountFromStore(string $user): array
+    {
+        $key = Str::slug($user);
+
+        if (isset($this->accountStore[$key])) {
+            return $this->accountStore[$key];
+        }
+
+        throw new SamedayException('Missing Account in Account Store');
+    }
+
+    /**
+     * setAccountFromStore
+     *
+     * @param  string $account
+     * @return void
+     */
+    public function setAccountFromStore(string $account)
+    {
+        $accountFromStore = $this->getAccountFromStore($account);
+
+        $this->setAccount(
+            $accountFromStore['user'],
+            $accountFromStore['pass']
+        );
     }
 }

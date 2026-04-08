@@ -79,12 +79,14 @@ class GetSamedayLockers extends Command
         $response = $sameday->getLockers($this->initLockerHydrator());
 
         if (! empty($response)) {
+
+            SamedayLocker::truncate();
+
             foreach ($response as $locker) {
 
                 SamedayLocker::create($this->getLockerData($locker));
             }
         }
-
     }
 
     /**
