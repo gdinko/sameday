@@ -2,9 +2,6 @@
 
 namespace Mchervenkov\Sameday;
 
-use Illuminate\Support\Str;
-use Mchervenkov\Sameday\Exceptions\SamedayException;
-
 class Sameday
 {
     use MakesHttpRequests;
